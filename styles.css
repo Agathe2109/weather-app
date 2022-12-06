@@ -1,0 +1,112 @@
+body {
+  background: #e2e9f3;
+  color: #495057;
+}
+.weather-app {
+  max-width: 800px;
+  border: 1px solid #e2e9f3;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #d9e2ee;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 46px;
+  font-family: "Maven Pro", sans-serif;
+}
+
+form {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+}
+.search {
+  border-radius: 20px 0px 0px 20px;
+  padding: 4px 13px;
+  border-width: thin;
+}
+
+.submit {
+  border-radius: 0px 20px 20px 0px;
+  padding: 4px 13px;
+  position: relative;
+  left: -4px;
+  border-width: thin;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: "Maven Pro", sans-serif;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.current-time {
+  white-space: nowrap;
+}
+.clear {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.clear .description {
+  white-space: nowrap;
+  font-size: 16px;
+}
+.nine {
+  font-size: 40px;
+}
+.tempp .active {
+  color: #495057;
+  font-size: 18px;
+  text-decoration: none;
+}
+.tempp .active:hover {
+  text-decoration: none;
+  cursor: default;
+}
+.days {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 18px;
+  font-family: "Maven Pro", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hover:hover {
+  background: #e2e9f3;
+  color: #495057;
+  border-radius: 10px;
+}
+.coded {
+  font-family: PT Mono, monospace;
+  text-align: center;
+  font-size: 14px;
+  line-height: 28px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+button {
+  border-radius: 20px;
+  margin: 0 auto;
+  display: block;
+  background-color: #efefef;
+  border: 1px solid #495057;
+  color: #495057;
+  font-size: 16px;
+  line-height: 2px;
+  padding: 14px 22px;
+  text-decoration: none;
+  transition: all 200ms ease;
+}
+button:hover {
+  color: #efefef;
+  background: #495057;
+}
