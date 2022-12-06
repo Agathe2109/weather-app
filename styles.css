@@ -91,7 +91,7 @@ h2 {
   line-height: 28px;
   position: relative;
   left: -40px;
-  bottom: 0;
+  margin-bottom: 80px;
   width: 100%;
 }
 button {
