@@ -90,6 +90,7 @@ h2 {
   line-height: 28px;
   position: fixed;
   bottom: 0;
+  left: -25px;
   width: 100%;
 }
 button {
