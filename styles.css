@@ -6,6 +6,7 @@ body {
   max-width: 800px;
   border: 1px solid #e2e9f3;
   margin: 0 auto;
+  padding: 20px;
   background-color: #d9e2ee;
   border-radius: 10px;
 }
