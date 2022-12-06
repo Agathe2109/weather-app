@@ -3,10 +3,9 @@ body {
   color: #495057;
 }
 .weather-app {
-  max-width: 800px;
+  max-width: 700px;
   border: 1px solid #e2e9f3;
   margin: 0 auto;
-  padding: 30px;
   background-color: #d9e2ee;
   border-radius: 10px;
 }
