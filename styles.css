@@ -1,14 +1,16 @@
 body {
-  background: #e2e9f3;
+  background: #f9fcfd;
   color: #495057;
 }
 .weather-app {
   max-width: 800px;
-  border: 1px solid #e2e9f3;
+  border: 1px solid #cfd8e2;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #d9e2ee;
+  padding: 30px;
+  background-color: #e2e9f3;
   border-radius: 10px;
+  box-shadow: 0.3px 0.3px 0.3px #c5cdd6;
+  margin-top: 25px;
 }
 
 h1 {
@@ -27,19 +29,21 @@ form {
   border-radius: 20px 0px 0px 20px;
   padding: 4px 13px;
   border-width: thin;
+  position: relative;
+  right: 40px;
 }
 
 .submit {
   border-radius: 0px 20px 20px 0px;
   padding: 4px 13px;
   position: relative;
-  left: -4px;
+  left: -44px;
   border-width: thin;
 }
 
 h2 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 20px;
   font-family: "Maven Pro", sans-serif;
   padding: 20px;
@@ -49,6 +53,7 @@ h2 {
 }
 .current-time {
   white-space: nowrap;
+  font-size: 16px;
 }
 .clear {
   font-size: 15px;
@@ -80,7 +85,7 @@ h2 {
   justify-content: center;
 }
 .hover:hover {
-  background: #e2e9f3;
+  background: #f9fcfd;
   color: #495057;
   border-radius: 10px;
 }
@@ -101,13 +106,26 @@ button {
   background-color: #efefef;
   border: 1px solid #495057;
   color: #495057;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 2px;
-  padding: 14px 22px;
+  padding: 14px 16px;
   text-decoration: none;
   transition: all 200ms ease;
+  position: relative;
+  right: -145px;
+  top: -55px;
 }
 button:hover {
   color: #efefef;
   background: #495057;
+}
+.weather-forecast-temp-min {
+  opacity: 0.8;
+}
+.weather-forecast-temp-max {
+  color: black;
+}
+.weather-forecast {
+  position: relative;
+  right: -75px;
 }

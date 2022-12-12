@@ -96,6 +96,8 @@ function showWeather(response) {
   );
 
   celsiusTemp = response.data.main.temp;
+
+  getforecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -127,3 +129,58 @@ let currentLocationButton = document.querySelector("#button-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Hamburg");
+
+// FORECAST
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2 hover weather-forecast-date">
+${formatDay(forecastDay.dt)}
+<br />
+<img src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" width="60px">
+<br />
+<span class= "weather-forecast-temp-min">${Math.round(
+          forecastDay.temp.min
+        )}°</span> | <span class="weather-forecast-temp-max">${Math.round(
+          forecastDay.temp.max
+        )}°</span>
+</div>
+`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getforecast(coordinates) {
+  let apiKey = "a5acb752426cd8188485c35694980e3a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
