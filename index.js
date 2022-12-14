@@ -11,18 +11,18 @@ let days = [
   "Saturday",
 ];
 let months = [
-  "Jan",
-  "Feb",
+  "January",
+  "February",
   "March",
   "April",
   "May",
   "June",
   "July",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
 let day = days[now.getDay()];
@@ -38,7 +38,7 @@ if (minute < 10) {
 let date = now.getDate();
 
 let actualDay = document.querySelector("#current-time");
-actualDay.innerHTML = `${day} ${date} ${month}, ${hour}:${minute}`;
+actualDay.innerHTML = `${day}, ${month} ${date} at ${hour}:${minute}`;
 
 let cityweather = document.querySelector("#city-input");
 cityweather.addEventListener("submit", searchCity);

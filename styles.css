@@ -129,3 +129,6 @@ button:hover {
   position: relative;
   right: -75px;
 }
+.update {
+  font-size: 18px;
+}
